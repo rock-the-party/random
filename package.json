@@ -1,0 +1,40 @@
+{
+  "name": "@r-t-p/random",
+  "version": "0.0.1",
+  "description": "A random number generator",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "justplainfred",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "preversion": "npm run test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rock-the-party/random.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rock-the-party/random/issues"
+  },
+  "keywords": [
+    "random"
+  ],
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "typescript": "^5.0.3",
+    "@types/jest": "^29.5.0",
+    "ts-jest": "^29.1.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)+(spec|test).ts?(x)"
+    ]
+  }
+}
