@@ -9,9 +9,13 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
+    "dev": "tsc -w",
     "preversion": "npm run test",
     "version": "npm run build",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "bump": "npm version patch",
+    "bump-minor": "npm version minor",
+    "bump-major": "npm version major"
   },
   "repository": {
     "type": "git",
